@@ -1,0 +1,39 @@
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.image-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+  max-width: 300px;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.image-details {
+  margin-top: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table td {
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+/* Optional: Set the height of the container if needed */
+}

@@ -1,0 +1,37 @@
+
+<div>
+    <h2 align="center">User Profile</h2>
+    
+ </div>
+ <div *ngFor="let data of data" id="pdf-content">
+ <div> <h3 align="center">Name:{{data.patientName}}</h3></div>
+ <hr>
+ <div><h4 align="center">emailid:{{data.email}}</h4></div>
+ <hr>
+ <table border="2" style="border-collapse: collapse;">
+     <tr>
+         <td>
+             Name of Employee
+         </td>
+         <td>{{data.patientName}}</td>
+     </tr>
+     <tr>
+         <td>email</td>
+         <td>{{data.email}}</td>
+     </tr>
+     <tr>
+         <td>address</td>
+         <td>{{data.address}}</td>
+     </tr>
+     <tr>
+         <td>phoneNo</td>
+         <td>{{data.phoneNo}}</td>
+     </tr>
+ </table>
+ 
+</div>
+
+ <div mat-dialog-actions>
+     <button  mat-raised-button color="primary" (click)="generatePDF()">Generate PDF</button>
+ </div>
+

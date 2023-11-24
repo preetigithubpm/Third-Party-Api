@@ -1,0 +1,38 @@
+
+
+    <div class="cart-container">
+      <h2>Your Shopping Cart</h2>
+      <table class="cart-table">
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th>Item ID</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total Price</th>
+            <th>inc/dec</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of cartItems">
+            <td><img [src]="openImg(item.imagePath)" (click)="openImg1(item.imagePath)" class="small-image" /></td>
+            <td>{{ item.id }}</td>
+            <td>{{ item.quantity }}</td>
+            <td>{{ item.price }}</td>
+            <td>{{ item.totalPrice }}</td>
+            <td class="cart-button">
+              <button mat-raised-button  (click)="increasing(item)">+</button>
+              <button mat-raised-button  (click)="decreasing(item)">-</button>
+            </td>
+              </tr>
+              <tr>
+                <td colspan="4"><strong>Total Price</strong></td>
+                <td>{{ totalCartPrice }}</td>
+                <td></td>
+              </tr>
+          </tbody>
+      </table>
+      <button class="custom-button" color="warn" (click)="placeOrder()">
+          Place Order
+      </button>
+  </div>

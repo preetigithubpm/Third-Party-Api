@@ -1,0 +1,79 @@
+
+  <div class="content">
+    <mat-toolbar color="primary">
+      <button mat-raised-button type="button"color="warn" (click)="back()">Back</button>
+     <span class="example-spacer" style="text-align: center;"> Student Profile</span>
+      <button mat-raised-button type="button"color="warn" (click)="AddEmployeeimage()">Add Student</button>
+    </mat-toolbar>
+  <ng-container>
+    <div class="search">
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <input type="text" [(ngModel)]="model.patientId" class="form-control" placeholder="patientId Id">
+        </div>
+        <div class="col-md-4">
+          <input type="text"[(ngModel)]="model.patientName" class="form-control" placeholder="patientName (start with)">
+        </div>
+        <div class="col-md-4">
+          <input type="text" [(ngModel)]="model.email" class="form-control" placeholder="email (contain)">
+        </div>
+      </div></div>
+    <div > 
+      <table mat-table [dataSource]="dataSource" matSort>
+        <ng-container matColumnDef="patientId">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+          <td mat-cell *matCellDef="let row"> {{row.patientId}} </td>
+        </ng-container>
+        <ng-container matColumnDef="patientName">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Student Name </th>
+          <td mat-cell *matCellDef="let row"> {{row.patientName}} </td>
+        </ng-container> 
+        <ng-container matColumnDef="address">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Address </th>
+          <td mat-cell *matCellDef="let row"> {{row.address}} </td>
+        </ng-container>  
+        <ng-container matColumnDef="dob">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> DOB </th>
+          <td mat-cell *matCellDef="let row">  {{ row.dob }} </td>
+        </ng-container> 
+        <ng-container matColumnDef="imagePath">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Student Picture </th>
+            <td mat-cell *matCellDef="let row"><img [src]="openImg(row.imagePath)"  (click)="openImg1(row.imagePath)" class="small-image" > </td>
+          </ng-container>  
+        <ng-container matColumnDef="email">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Email </th>
+          <td mat-cell *matCellDef="let row"> {{row.email}} </td>
+        </ng-container>  
+        <ng-container matColumnDef="phoneNo">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Phone No </th>
+          <td mat-cell *matCellDef="let row"> {{row.phoneNo}} </td>
+        </ng-container>  
+        <ng-container matColumnDef="action">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Action </th>
+          <td mat-cell *matCellDef="let row">
+            <button mat-icon-button color="primary" (click)="openEdit(row)">
+              <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-icon-button color="warn" (click)="deleteSubmit(row.patientId)">
+              <mat-icon>delete</mat-icon>
+            </button>
+            <button mat-icon-button color="warn" (click)="getDetailsimage(row)">
+              <mat-icon>visibility</mat-icon>
+            </button>
+          </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table> 
+      <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+  
+    
+  
+  
+    </div>
+  </ng-container>
+  
+  
+
+  </div>
+    

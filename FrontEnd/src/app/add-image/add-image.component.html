@@ -1,0 +1,69 @@
+<div mat-dialog-title class="header">
+  <h1>{{data ? 'Update Form' : ' Form'}}</h1>
+</div>
+<form [formGroup]="patientForm">
+  <div mat-dialog-content class="content">
+      <div class="row">
+          <!-- Error Messages -->
+          <div class="error-message" *ngIf="patientForm.get('patientName')?.invalid && patientForm.get('patientName')?.touched">
+              Please enter a valid Student name.
+          </div>
+          <div *ngIf="patientForm.get('patientName')?.hasError('minlength')">
+              Student Name must be at least 4 characters.
+          </div>
+          <div *ngIf="patientForm.get('patientName')?.hasError('containsNumber')">
+              Student name cannot contain numbers.
+          </div>
+          <!-- Student Name Input -->
+          <mat-form-field appearance="outline" class="form-field">
+              <mat-label>Student Name</mat-label>
+              <input matInput type="text" formControlName="patientName" placeholder="Student Name">
+          </mat-form-field>
+          <!-- Email Input -->
+          <div *ngIf="patientForm.get('email')?.hasError('required')">
+              Email is required.
+          </div>
+          <div *ngIf="patientForm.get('email')?.hasError('email')">
+              Please enter a valid email address.
+          </div>
+          <mat-form-field appearance="outline" class="form-field">
+              <mat-label>Email Id</mat-label>
+              <input matInput type="text" formControlName="email" placeholder="Email Id">
+          </mat-form-field>
+      </div>
+
+      <div class="row">
+          <!-- Address Input -->
+          <mat-form-field appearance="outline" class="form-field">
+              <mat-label>Address</mat-label>
+              <input matInput type="text" formControlName="address" placeholder="Address">
+          </mat-form-field>
+          <!-- Date Of Birth Input -->
+          <div *ngIf="patientForm.get('dob')?.hasError('required')">
+              Date of Birth is required.
+          </div>
+          <mat-form-field appearance="outline" class="form-field">
+              <mat-label>Date Of Birth</mat-label>
+              <input matInput required [matDatepicker]="picker" formControlName="dob" placeholder="Date Of Birth">
+              <mat-hint>MM/DD/YYYY</mat-hint>
+              <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+          <!-- User Profile Input -->
+          <input type="file" (change)="onFileSelected($event)" formControlName="imagePath" />
+          <img *ngIf="selectedFile" [src]="selectedFileUrl" alt="Selected Image" >
+          <!-- Phone Input -->
+          <mat-form-field appearance="outline" class="form-field">
+              <mat-label>Phone</mat-label>
+              <input matInput type="text" formControlName="phoneNo" placeholder="phoneNo">
+          </mat-form-field>
+      </div>
+      <div mat-dialog-action class="action">
+          <button mat-raised-button type="button" [mat-dialog-close]="false" class="cancel-button">Cancel</button>
+          <button mat-raised-button color="primary" type="submit" (click)="onSubmit()"
+              class="submit-button">{{data1 ? 'Update' : 'Save' }}</button>
+      </div>
+  </div>
+
+</form>
+<img *ngIf="uploadSelectedImg" [src]="uploadSelectedImg" alt="Selected Image">

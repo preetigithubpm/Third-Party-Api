@@ -1,0 +1,38 @@
+/* Apply styles to the container of the image grid */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust the column width as needed */
+    gap: 16px; /* Adjust the gap between images */
+  }
+  
+  /* Style individual image items */
+  .image-item {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #ddd; /* Add a border around each image */
+    border-radius: 4px; /* Add rounded corners to the images */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  }
+  
+  /* Style the images themselves */
+  .image-item img {
+    width: 100%; /* Make sure the images fill their containers */
+    height: auto; /* Automatically adjust the height to maintain aspect ratio */
+  }
+  
+  /* Optional: Style the alt text (image description) */
+  .image-item img::alt {
+    font-style: italic;
+    color: #666;
+  }
+  
+  /* Optional: Add hover effect on image items */
+  .image-item:hover {
+    transform: scale(1.05); /* Scale the image on hover */
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+  }
+  p {
+    font-family: Lato;
+  }
+  

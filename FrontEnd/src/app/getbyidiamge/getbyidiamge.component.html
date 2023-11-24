@@ -1,0 +1,40 @@
+<div>
+    <h2 align="center">image Profile</h2>
+ </div>
+ <div *ngFor="let data of data" id="pdf-content">
+ <div> <h3 align="center">Name:{{data.patientName}}</h3></div>
+ <hr>
+ <div > <div class="image-grid">
+    <div *ngFor="let i of data" class="image-item">
+      <img [src]="imageShow(i)" alt="Image">
+    {{i.image}}
+  </div></div> 
+ <hr>
+ <table border="2" style="border-collapse: collapse;">
+     <tr>
+         <td>
+             Name of Employee
+         </td>
+         <td>{{data.patientName}}</td>
+     </tr>
+     <tr>
+         <td>email</td>
+         <td>{{data.email}}</td>
+     </tr>
+     <tr>
+         <td>address</td>
+         <td>{{data.address}}</td>
+     </tr>
+     <tr>
+         <td>phoneNo</td>
+         <td>{{data.phoneNo}}</td>
+     </tr>
+ </table>
+ 
+</div>
+
+ <div mat-dialog-actions>
+     <button  mat-raised-button color="primary" (click)="generatePDF()">Generate PDF</button>
+ </div>
+
+

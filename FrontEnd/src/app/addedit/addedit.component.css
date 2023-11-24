@@ -1,0 +1,60 @@
+/* Styling for the whole dialog container */
+.dialog-container {
+  width: 400px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Styling for the dialog title */
+.mat-dialog-title h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+/* Styling for the form */
+form {
+  margin-top: 20px;
+}
+
+/* Styling for form fields */
+mat-form-field {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Styling for labels */
+mat-label {
+  font-size: 16px;
+}
+
+/* Styling for inputs */
+input.mat-input {
+  width: 100%;
+  font-size: 16px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Styling for datepicker input */
+input[type="datetime"] {
+  width: 100%;
+  font-size: 16px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Styling for buttons */
+.mat-dialog-action button {
+  margin-right: 10px;
+}
+
+/* Styling for the action row */
+.action {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}

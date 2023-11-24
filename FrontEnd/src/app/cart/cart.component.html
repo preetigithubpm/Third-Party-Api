@@ -1,0 +1,64 @@
+<header>
+  <div class="navbar bg-primary shadow-sm">
+      <div class="navbar-brand align-item-center d-flex">
+          <i class="fa fa-shipping-fast" style="font-size:20px;color:white;">
+          </i>
+              <strong style="font-size: 20px;color: white;">Shipping</strong>
+              <div class="form-group">
+                   <input
+    type="text"
+    class="form-control"
+    placeholder="Search Book by Bookname"/>
+  <i class="fa fa-search search-icon" style="font-size: 30px; color: rgb(41, 41, 83)" ></i>
+</div>
+              <span><div class="cart-counter">
+                <button (click)="addtobag()" style="margin-left: 99%;">
+                  <mat-icon style="background-color: white;" >
+                    shopping_bag
+                  </mat-icon>
+              </button>
+                </div></span>
+                
+
+
+      </div>
+  </div>
+</header>
+<div class="image-grid">
+    <div *ngFor="let imageUrl of imageUrls" class="image-item">
+      <div class="image-container">
+        <img [src]="imageShow(imageUrl?.imgLoc)" alt="Image">
+      </div>
+      <div class="image-details">
+        <table>
+          <tr>
+            <td><strong>Author:</strong></td>
+            <td>{{ imageUrl?.excelLoc }}</td>
+          </tr>
+          <tr>
+            <td><strong> Book Name:</strong></td>
+            <td>{{ imageUrl?.userName }}</td>
+          </tr>
+          <tr>
+            <td><strong>description:</strong></td>
+            <td>{{ imageUrl?.fileLoc }}</td>
+          </tr>
+          <tr>
+            <td><strong>Price:</strong></td>
+            <td>{{ imageUrl?.price }}</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              <button mat-raised-button class="custom-button button-gap button-container" color="warn" (click)="addToCart(imageUrl)">
+                Add to cart
+              </button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+ 
+
+  

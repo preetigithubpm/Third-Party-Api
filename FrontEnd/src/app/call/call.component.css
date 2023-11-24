@@ -1,0 +1,17 @@
+/* Style for the small-image class */
+.small-image {
+    max-width: 100px; /* Adjust the maximum width as needed */
+    max-height: 100px; /* Adjust the maximum height as needed */
+    cursor: pointer; /* Add a pointer cursor to indicate it's clickable */
+    border: 1px solid #ccc; /* Add a border for visual distinction */
+    border-radius: 5px; /* Add some rounded corners for a nice look */
+    transition: transform 0.3s ease-in-out; /* Add a smooth hover effect */
+}
+
+.small-image:hover {
+    transform: scale(1.1); /* Scale the image slightly on hover for an interactive effect */
+}
+.example-spacer
+{
+  flex: 1 1 auto;
+}

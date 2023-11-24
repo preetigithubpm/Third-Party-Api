@@ -1,0 +1,35 @@
+<div class="container">
+    <h2 class="login-title">Log in</h2>
+
+    <form class="login-form" [formGroup]="loginForm" >
+      <div>
+        <label for="name">Name </label>
+        <input
+               id="name"
+               type="text"
+               placeholder="Eren Buruk"
+               name="name"
+               formControlName="name"
+               required
+               />
+      </div>
+      <div>
+        <label for="password">Password </label>
+        <input
+               id="password"
+               type="password"
+               placeholder="password"
+               name="password"
+               formControlName="password"
+               required
+               />
+      </div>
+
+      <button class="btn btn--form" type="submit" value="Log in" (click)="onLogin()">
+        Log in
+      </button>
+      <button class="btn btn--form" type="submit" value="Log in" (click)="onSignup()">
+       sign up
+      </button>
+    </form>
+</div>

@@ -1,0 +1,27 @@
+
+button.mat-button {
+    background-color: #1976d2; 
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+  
+
+  .mat-menu-item {
+    padding: 8px 16px;
+    color: #333; 
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .mat-menu-item:hover {
+    background-color: #b89b9b; 
+  }
+  
+  .mat-menu-panel {
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+  }
+  

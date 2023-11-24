@@ -1,0 +1,43 @@
+/* Style for the image grid */
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  /* Style for each image item */
+  .image-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 300px; /* Adjust the width as needed */
+  }
+  
+  /* Style for the image container (adjust size as needed) */
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Style for the image details table */
+  .image-details table {
+    width: 100%;
+  }
+  
+  /* Style for the "Add to Cart" button */
+  .custom-button {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .form-control{
+    border-radius: 3px;
+    width: 600px;
+    margin-left: 20px;
+}
+.search-icon{
+    position: absolute;
+    z-index: 10;
+    top: 20%;
+    right: 26%;
+    color: white;
+}
+  

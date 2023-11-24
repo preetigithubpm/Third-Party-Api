@@ -1,0 +1,44 @@
+
+<h1>Book Profile</h1>
+<form [formGroup]="Imageform">  
+  <mat-form-field appearance="outline">
+    <mat-label>Author</mat-label>
+    <input matInput type="text" formControlName="excelLoc" placeholder="Author Name">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Book Name</mat-label>
+    <input matInput type="text" formControlName="userName" placeholder="Book Name">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>price</mat-label>
+    <input matInput type="text" formControlName="price" placeholder="price">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Description</mat-label>
+    <input matInput type="text" formControlName="fileLoc" placeholder="Description">
+  </mat-form-field>
+<br>
+<mat-label><strong> Book Detail</strong></mat-label><br>
+<input  type="file" formControlName="images"  (change)="onFileSelected($event)">
+<img *ngIf="selectedFile" [src]="selectedFileUrl" alt="Selected Image"><hr>
+<button mat-raised-button (click)="clearFile()">Clear</button>
+<button mat-raised-button type="button" (click)="submitImage()">Submit</button>
+<!-- <button mat-raised-button type="button" (click)="closeDialog()">cancel</button> -->
+</form>
+
+<!-- <h1>User Profile</h1>
+
+<!-- <form [formGroup]="Imageform"> -->
+  <!-- <mat-form-field>
+    <mat-label>Upload User Profile</mat-label>
+    <input type="file" formControlName="images" (change)="onFileSelected($event)">
+  </mat-form-field> -->
+
+  <!-- <img *ngIf="selectedFile" [src]="selectedFileUrl" alt="Selected Image">
+  <hr>
+
+  <button mat-raised-button (click)="clearFile()">Clear</button>
+  <button mat-raised-button type="button" (click)="submitImage()">Submit</button> -->
+<!-- </form> --> 
+
+  

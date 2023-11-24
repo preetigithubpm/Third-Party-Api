@@ -1,0 +1,15 @@
+.cancel-page {
+    text-align: center;
+    margin: 50px;
+  }
+  
+  .cancel-page h1 {
+    font-size: 24px;
+    color: #ff0000; /* Red color for emphasis */
+  }
+  
+  .cancel-page p {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  

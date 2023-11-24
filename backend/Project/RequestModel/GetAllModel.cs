@@ -1,0 +1,29 @@
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+
+namespace task29August.RequestModel
+{
+    public class GetAllModel
+    {
+        public int PatientId { get; set; }
+   
+        public string? PatientName { get; set; }
+        public string? Address { get; set; }
+        public DateTime? Dob { get; set; }
+        public string? Email { get; set; }
+        public string? PhoneNo { get; set; }
+
+
+        public bool? IsActive { get; set; }
+        public bool? IsDeleted { get; set; }
+    }
+    public class GetAllModelCart
+    {
+        public int UserId { get; set; }
+        public int Id { get; set; }
+        public int Quantity { get; set; }
+        public decimal Price { get; set; }
+        public decimal TotalPrice { get; set; }
+        public string? ImagePath { get; set; }
+    }
+}

@@ -1,0 +1,13 @@
+<div class="container" *ngIf="ispayment">
+    <i class="fas fa-check-circle success-icon"></i>
+    <h1>Payment Successful</h1>
+    <p>Thank you for your payment. Your transaction was successful.</p>
+    <button class="back-button" (click)="goBack()">Back to Home</button>
+  </div>
+  <div id="payment-container" *ngIf="iswaiting">
+    <h1>Waiting for Payment</h1>
+    <div class="loader"></div>
+    <p>Please do not close this page. Your payment is being processed.</p>
+</div>
+
+  

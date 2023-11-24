@@ -1,0 +1,22 @@
+
+<div mat-dialog-title>
+    <h1>Product</h1>
+</div>
+<form [formGroup]="prodForm">
+<div mat-dialog-content class="content">
+    <div class="row">
+  
+    </div>
+        <mat-form-field appearance="outline">
+            <mat-label>Product Name</mat-label>
+            <input matInput type="text" formControlName="name" placeholder="Product Nmae">      
+         </mat-form-field> 
+    </div>   
+<div mat-dialog-action class="action">
+  <button mat-raised-button type="button" [mat-dialog-close]="false">cancel</button>
+  <button mat-raised-button color="primary" type="submit" (click)="Send(prodForm.value)">sent</button>
+</div>  
+
+</form> 
+  
+

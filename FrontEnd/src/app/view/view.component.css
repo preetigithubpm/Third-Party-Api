@@ -1,0 +1,49 @@
+.content {
+    padding: 20px;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .content h3 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .content h4 {
+    margin: 0;
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .content h5 {
+    margin: 0;
+    font-size: 18px;
+    color: #555;
+  }
+  
+  hr {
+    margin: 15px 0;
+    border: none;
+    border-top: 1px solid #ccc;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid black;
+    margin-top: 20px;
+  }
+  
+  table td, table th {
+    padding: 8px;
+    border: 1px solid black;
+  }
+  
+  table th {
+    background-color: #f2f2f2;
+  }
+  
+  table td {
+    background-color: #ffffff;
+  }
+  

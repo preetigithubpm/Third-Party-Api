@@ -1,0 +1,289 @@
+mat-toolbar{
+  /* display: flex; */
+  /* /* margin-top: 10px; */
+  margin-left: 0%; 
+ margin-top: 0px;
+ margin-right:0;
+ width: 100%;
+  /* margin-right: 0rem; */
+  
+  justify-content: space-between;
+.user-info{
+  display: flex;
+  align-items: center;
+ 
+  span{
+      margin-right: 7.5 rem;
+  }
+  mat-icon{
+      transform: scale(1.4);
+  }
+}
+
+}
+
+.button-gap
+{
+  margin-left: 16px;
+  
+}
+.example-spacer
+{
+  flex: 1 1 auto;
+}
+
+.sidebar {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  padding-top: 20px;
+}
+.sidebar h2{
+color: #f2f2f2;
+text-align: center;
+}
+.sidebar hr{
+color: #f2f2f2;
+}
+.sidebar a {
+  padding: 10px 16px;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  display: block;
+}
+
+.sidebar a:hover {
+  background-color: #333;
+}
+.sidebar button{
+width:100%
+}
+.content {
+  margin-left: 160px;
+  padding: 3px;
+}
+/* restaurant-table.component.css */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 14px;
+  border: 1px solid #ccc;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+}
+/* Container for the image overlay */
+.image-overlay-container {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+display: none; /* Initially hidden */
+justify-content: center;
+align-items: center;
+z-index: 9999; /* Make sure the overlay is above other content */
+}
+
+.image-overlay {
+max-width: 80%;
+max-height: 80%;
+}
+
+.image-overlay-container.active {
+display: flex;
+}
+.small-image{
+max-width: 70px; /* Set a maximum width for the image */
+max-height: 70px; /* Set a maximum height for the image */
+display: block; /* Ensure the image is displayed as a block element */
+margin-top: 10px; /* Add some spacing between the input and the image */
+border: 1px solid #ddd; /* Add a border for visual separation */
+box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); 
+}
+.mat-elevation-z8{
+margin-left: 16rem;
+}
+.example-spacer
+{
+  margin: 10rem;
+}
+  
+  .button-gap {
+    margin-left: 0px; 
+}
+  .main-body{
+    padding-top: 0px;
+    max-width: 1000000px;
+    mat-form-field{
+    width: 100%;
+    }
+  }
+  
+.mat-toolbar {
+    background-color:brown;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+  }
+  
+  
+ 
+
+  .table-container {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+ 
+  th.mat-header-cell {
+    font-weight: bold;
+    text-align: left;
+    padding: 8px 16px;
+  }
+  
+ 
+  td.mat-cell {
+    padding: 8px 16px;
+  }
+  
+  
+  button.mat-icon-button {
+    margin: 0 4px;
+    padding: 4px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  button.mat-icon-button.mat-warn {
+    color: #e53935;
+  }
+  
+  
+  mat-icon {
+    font-size: 18px;
+  }
+  
+ 
+  tr.mat-row:nth-child(even) {
+    background-color:greenyellow;
+  }
+  /* Reset some default browser styles */
+
+  .custom-button {
+    background-color: yellow;
+    color: black; /* You can adjust the text color as needed */
+  }
+  
+
+
+  .filtered {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .filtered input {
+    height: 2rem;
+  }
+  
+  .filtered button {
+    margin-right: 10px;
+  }
+  /* Add this CSS in your stylesheet or <style> tag in the component */
+footer {
+  background-color: #333; /* Set your desired background color */
+  color: #fff; /* Set text color */
+  padding: 10px 0; /* Add padding for spacing */
+  text-align: center; /* Center-align the text */
+}
+
+.footer-content {
+  max-width: 1200px; /* Set a maximum width for the content */
+  margin: 0 auto; /* Center-align the content horizontally */
+}
+/* Add this CSS in your stylesheet or <style> tag in the component */
+.custom-section {
+  background-color: #f2f2f2; /* Set your desired background color */
+  padding: 20px; /* Add padding for spacing */
+  border: 1px solid #ddd; /* Add a border for visual separation */
+  border-radius: 5px; /* Add rounded corners */
+  margin-top: 20px; /* Add margin to separate from previous content */
+}
+
+/* Add this CSS in your stylesheet or <style> tag in the component */
+.custom-section {
+  background-color: #f2f2f2; /* Set your desired background color */
+  padding: 20px; /* Add padding for spacing */
+  border: 1px solid #ddd; /* Add a border for visual separation */
+  border-radius: 5px; /* Add rounded corners */
+  margin-top: 20px; /* Add margin to separate from previous content */
+}
+
+.section-title {
+  font-size: 24px; /* Set the font size for the section title */
+  color: #333; /* Set the text color for the title */
+  margin-bottom: 10px; /* Add margin to separate the title from content */
+}
+
+.section-content p {
+  font-size: 16px; /* Set the font size for paragraph text */
+  line-height: 1.5; /* Set the line height for readability */
+  color: #555; /* Set the text color for the content */
+}
+/* Assuming you want to add the background image to the entire application */
+
+  
+/* ----------------------- */
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+#search-bar {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#search-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+#search-button:hover {
+  background-color: #45a049;
+}

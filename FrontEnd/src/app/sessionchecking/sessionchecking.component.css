@@ -1,0 +1,41 @@
+body {
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+div.mat-dialog-title {
+    text-align: center;
+    background-color: #2196F3;
+    color: #fff;
+    padding: 10px;
+}
+div.mat-dialog-content.content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+mat-form-field {
+    width: 100%;
+    margin-bottom: 15px;
+}
+div.mat-dialog-action.action {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Style for the "sent" button */
+button[type="submit"] {
+    background-color: #2196F3;
+    color: #fff;
+}
+
+/* Style for the "cancel" button */
+button[type="button"] {
+    background-color: #ccc;
+    color: #000;
+}

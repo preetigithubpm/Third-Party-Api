@@ -1,0 +1,15 @@
+<form [formGroup]="otpForm">
+    <div mat-dialog-content class="content">
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>otp</mat-label>
+                <input matInput type="email" formControlName="otp" placeholder="otp">
+              </mat-form-field>
+        </div>   
+    <div mat-dialog-action class="action">
+      <button mat-raised-button type="button" [mat-dialog-close]="false">cancel</button>
+      <button mat-raised-button color="primary" type="submit" (click)="otpverify(otpForm.value)">send otp</button>
+    </div>  
+   </div> 
+    </form> 
+      

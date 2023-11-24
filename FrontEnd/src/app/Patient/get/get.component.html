@@ -1,0 +1,93 @@
+<div class="sidebar">
+   
+  <a>  <button mat-raised-button color="basic" routerLink="/session" > Payment </button></a>
+  <a>  <button mat-raised-button color="basic" routerLink="/cart" > Student </button></a>
+  <a>  <button mat-raised-button color="basic" (click)="hist()" >     Barchart </button></a>
+<a >  <button mat-raised-button color="basic" (click)="gomail()"> Email</button></a>
+<a><button mat-raised-button color="basic" (click)="getImage(pat)" >Add Books</button></a>
+<a><button mat-raised-button color="basic" routerLink="/com">Checkout</button></a>
+<a>  <button mat-raised-button  color="basic" (click)="stripe()">Stripe</button></a>
+<a><button mat-raised-button color="basic" (click)="uploadedmageswithdatails()">Book Slot </button></a>
+<a>  <button mat-raised-button color="basic" routerLink="/card" >  Books</button></a>
+<a >  <button mat-raised-button color="basic" (click)="test()">DICOM FILE
+</button></a>
+
+<a >  <button mat-raised-button color="basic" (click)="logOut()">LogOut
+</button></a>
+
+
+</div>
+<div class="content">
+<ng-container>
+<div>
+    <mat-toolbar >
+      <button mat-raised-button   (click)="sendFax()">FAX</button>
+      
+     <span class="example-spacer" style="text-align: center;"> Study Hub</span>
+      <button mat-raised-button mat-raised-button  (click)="AddEmployee()" >Add Librerian</button>
+    </mat-toolbar>
+  <div class="filtered">
+    <input matInput placeholder="Name Filter" #nameFilter>&nbsp; &nbsp;
+    <input matInput placeholder="Address Filter" #addressFilter>&nbsp; &nbsp;
+    <button mat-raised-button color="primary" (click)="filterByNameAndAddress(nameFilter.value, addressFilter.value)">Filter</button>&nbsp; &nbsp;
+    <button mat-raised-button color="warn" (click)="clearFilters()">Clear</button>
+    <button mat-raised-button color="warn" (click)="sendMessage()">Chat</button>
+    <button mat-raised-button color="warn" (click)="video()">Video Chat</button>
+    <button (click)="GetCallFrom(callValue)">
+      <mat-icon style="background-color: white;" >
+          call
+      </mat-icon>
+  </button>
+    </div> 
+</div>
+
+  <div > 
+    <table mat-table [dataSource]="dataSource" matSort>
+      <ng-container matColumnDef="patientId">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+        <td mat-cell *matCellDef="let row"> {{row.patientId}} </td>
+      </ng-container>
+      <ng-container matColumnDef="patientName">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Librarian Name </th>
+        <td mat-cell *matCellDef="let row"> {{row.patientName}} </td>
+      </ng-container> 
+      <ng-container matColumnDef="address">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Address </th>
+        <td mat-cell *matCellDef="let row"> {{row.address}} </td>
+      </ng-container>  
+      <ng-container matColumnDef="dob">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> DOB </th>
+        <td mat-cell *matCellDef="let row">  {{ row.dob }} </td>
+      </ng-container> 
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Email </th>
+        <td mat-cell *matCellDef="let row"> {{row.email}} </td>
+      </ng-container>  
+      <ng-container matColumnDef="phoneNo">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Phone No </th>
+        <td mat-cell *matCellDef="let row"> {{row.phoneNo}} </td>
+      </ng-container>  
+      <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Action </th>
+        <td mat-cell *matCellDef="let row">
+          <button mat-icon-button color="primary" (click)="openEdit(row)">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button color="warn" (click)="deleteSubmit(row.patientId)">
+            <mat-icon>delete</mat-icon>
+          </button>
+          <button mat-icon-button color="warn" (click)="getDetails(row)">
+            <mat-icon>visibility</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table> 
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users">
+    </mat-paginator>
+  </div>
+</ng-container>
+</div>
+
+

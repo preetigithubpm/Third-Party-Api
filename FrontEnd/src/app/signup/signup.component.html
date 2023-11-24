@@ -1,0 +1,54 @@
+<div class="form_wrapper">
+    <div class="form_container">
+      <div class="title_container">
+        <h2> Registration Form</h2>
+      </div>
+      <div class="row clearfix">
+        <div >
+          <form [formGroup]="signupForm">
+            <div class="error-message" *ngIf="signupForm.get('name')?.invalid && signupForm.get('name')?.touched">
+                login field is required
+              </div>
+              <div class="error-message" *ngIf="signupForm.get('password')?.invalid && signupForm.get('password')?.touched">
+                login field is required
+              </div>
+            <div class="input_field"> <span></span>
+              <input type="text" placeholder="Name" required formControlName="name" />
+            </div>
+            <div class="error-message" *ngIf="signupForm.get('password')?.invalid && signupForm.get('password')?.touched">
+                login field is required
+              </div>
+            <div class="input_field"> <span></span>
+              <input type="password" placeholder="Password" formControlName="password" required>
+            </div>
+            <div class="input_field"> <span></span>
+              <input type="password" name="password" placeholder="Re-type Password" required />  
+            </div>
+            <div *ngIf="signupForm.get('email')?.hasError('required')">
+              Email is required.
+            </div>
+            <div *ngIf="signupForm.get('email')?.hasError('email')">
+              Please enter a valid email address.
+            </div>
+            <div class="input_field"> <span></span>
+              <input type="email" placeholder="Password" formControlName="email" required> 
+             </div>
+            <div class="error-message" *ngIf="signupForm.get('roleId')?.invalid && signupForm.get('roleId')?.touched">
+                login field is required
+              </div>
+                <div class="input_field select_option">
+                  <select formControlName="roleId">
+                    <option value="">Select a Role</option>
+                    <option value="1">Admin</option>
+                    <option value="2">Libra</option>
+                    <option value="3">Student</option>
+                  </select>
+                  <div class="select_arrow"></div>
+                </div>
+             
+            <input class="button" type="submit" value="Register" (click)="signUpUser(signupForm.value)"  />
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>

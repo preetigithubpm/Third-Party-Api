@@ -1,0 +1,37 @@
+
+<div mat-dialog-title>
+    <h1>Chat Box</h1>
+</div>
+<form [formGroup]="priceForm">
+<div mat-dialog-content class="content">
+    <div class="row">
+        <mat-form-field appearance="outline">
+            <mat-label>Interval:</mat-label>
+            <mat-select formControlName="interval" placeholder="Select interval">
+              <mat-option value="month">Monthly</mat-option>
+              <mat-option value="year">Yearly</mat-option>
+              <mat-option value="week">Weekly</mat-option>
+              <mat-option value="day">daily</mat-option>
+            </mat-select>
+          </mat-form-field>
+          
+  
+          <mat-form-field appearance="outline" style="display: none;">
+            <mat-label>prodid:-</mat-label>
+            <input matInput type="text" formControlName="prodid" placeholder="prodid" >
+          </mat-form-field>
+  
+        <mat-form-field appearance="outline">
+            <mat-label>amount</mat-label>
+            <input matInput type="number" formControlName="amount" placeholder="amount">      
+         </mat-form-field> 
+    </div>   
+</div>
+<div mat-dialog-action class="action">
+  <button mat-raised-button type="button" [mat-dialog-close]="false">cancel</button>
+  <button mat-raised-button color="primary" type="submit" (click)="meassegSend(priceForm.value)">sent</button>
+</div>  
+
+</form> 
+  
+

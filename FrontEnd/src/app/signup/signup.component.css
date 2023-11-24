@@ -1,0 +1,99 @@
+/* styles.css */
+.form_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+  }
+  
+  .form_container {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+  }
+  
+  .title_container {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .title_container h2 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .input_field {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .input_field input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+  }
+  
+  .input_field span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    color: #333;
+  }
+  
+  .select_option {
+    position: relative;
+  }
+  
+  .select_option select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    appearance: none;
+    background: transparent;
+  }
+  
+  .select_arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    pointer-events: none;
+    width: 20px;
+    height: 20px;
+    background-color: #ccc;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  }
+  
+  .button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }
+  

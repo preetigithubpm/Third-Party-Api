@@ -1,0 +1,41 @@
+<div mat-dialog-title>
+    <h1>Payment</h1>
+</div>
+<form [formGroup]="sessionForm">
+<div mat-dialog-content class="content">
+    <div class="row">
+        <mat-form-field appearance="outline">
+            <mat-label>Customer Name:-</mat-label>
+            <input matInput type="email" formControlName="name" placeholder=" Customer Name">
+          </mat-form-field>
+        </div>
+        <mat-form-field appearance="outline">
+            <mat-label>email</mat-label>
+            <input matInput type="email" formControlName="email" placeholder="email">      
+         </mat-form-field> 
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>amount:-</mat-label>
+                <input matInput type="number" formControlName="amount" placeholder="amount">
+              </mat-form-field>
+            </div>
+            <mat-form-field appearance="outline">
+                <mat-label>quantity</mat-label>
+                <input matInput type="number" formControlName="quantity" placeholder="quantity">      
+             </mat-form-field> 
+             <div class="row">
+                <mat-form-field appearance="outline">
+                    <mat-label>productName</mat-label>
+                    <input matInput type="text" formControlName="productName" placeholder="productName">      
+                 </mat-form-field> 
+             </div>
+          
+ 
+<div mat-dialog-action class="action">
+  <button mat-raised-button type="button" [mat-dialog-close]="false">cancel</button>
+  <button mat-raised-button color="primary" type="submit" (click)="sessionSend(sessionForm.value)">sent</button>
+</div>  
+</div>
+</form> 
+  
+

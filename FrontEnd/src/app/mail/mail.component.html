@@ -1,0 +1,27 @@
+<div mat-dialog-title>
+    <h1>Sending Mail</h1>
+</div>
+<form [formGroup]="mailForm">
+<div mat-dialog-content class="content">
+    <div class="row">
+        <mat-form-field appearance="outline">
+            <mat-label>To:-</mat-label>
+            <input matInput type="email" formControlName="toEmail" placeholder="TO Email">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Subject</mat-label>
+            <input matInput type="text" formControlName="subject" placeholder="subject ">
+          </mat-form-field>      
+    </div>
+        <mat-form-field appearance="outline">
+            <mat-label>body</mat-label>
+            <input matInput type="text" formControlName="body" placeholder="Address">      
+         </mat-form-field> 
+    </div>   
+<div mat-dialog-action class="action">
+  <button mat-raised-button type="button" [mat-dialog-close]="false">cancel</button>
+  <button mat-raised-button color="primary" type="submit" (click)="mailsend(mailForm.value)">send Mail</button>
+</div>  
+
+</form> 
+  
